@@ -25,9 +25,9 @@ namespace ConsoleApplication2
             Driver.Manage().Window.Maximize();
 
             //Navigate to the url
-            //Driver.Navigate().GoToUrl("https://staging3.mediacentrecore.com");
+            Driver.Navigate().GoToUrl("https://staging3.mediacentrecore.com");
 
-            Driver.Navigate().GoToUrl("https://staging3.mediacentrecore.com/Account/Login?ReturnUrl=%2F");
+            //Driver.Navigate().GoToUrl("https://staging3.mediacentrecore.com/Account/Login?ReturnUrl=%2F");
 
             //type in the username 
             Driver.FindElement(By.XPath(".//*input[@id='username']")).SendKeys("admina");
