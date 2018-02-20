@@ -11,40 +11,50 @@ namespace ConsoleApplication2
     {
         static void Main(string[] args)
         {
-            IWebDriver Driver;
-            // Open a frefox browser
-            string driverPath = "C:\\Users\\raqeeb.uddin\\Desktop\\New folder\\packages\\Selenium.Firefox.WebDriver.0.19.1\\driver\\";
-     
+            //FirefoxProfile firefoxProfile = new FirefoxProfile();
+            //firefoxProfile.AcceptUntrustedCertificates = true;
+            //FirefoxOptions options = new FirefoxOptions();
+            //options.Profile = firefoxProfile;
 
-            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(driverPath);
-            service.FirefoxBinaryPath = (@"C:\Program Files\Mozilla Firefox\firefox.exe");
-            Driver = new FirefoxDriver(service);
-           
 
-            //Maximise the Browser
-            Driver.Manage().Window.Maximize();
+            //IWebDriver Driver;
+            //// Open a frefox browser
+            //string driverPath = @"C:\Users\NARC\source\repos\AutoLogin\packages\Selenium.Firefox.WebDriver.0.19.1\driver";
 
-            //Navigate to the url
-            Driver.Navigate().GoToUrl("https://staging3.mediacentrecore.com");
+            //FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(driverPath);
+            //service.FirefoxBinaryPath = (@"C:\Program Files\Mozilla Firefox\firefox.exe");
+            
+            //Driver = new FirefoxDriver(service);
 
-            //Driver.Navigate().GoToUrl("https://staging3.mediacentrecore.com/Account/Login?ReturnUrl=%2F");
 
-            //type in the username 
-            Driver.FindElement(By.XPath(".//*input[@id='username']")).SendKeys("admina");
+            ////Maximise the Browser
+            //Driver.Manage().Window.Maximize();
 
-            //Enter the password
-            Driver.FindElement(By.XPath(".//*input[@='password']")).SendKeys("password");
+            ////Navigate to the url
 
-            //Press Login
-            Driver.FindElement(By.XPath(".//*type[@='submit']")).Click();
+            //Driver.Url = ("https://staging3.mediacentrecore.com");
+            ////Driver.Navigate().GoToUrl("https://staging3.mediacentrecore.com");
 
-            //As an OT Location User
-            Driver.FindElement(By.XPath(".//*input[@id='username']")).SendKeys("Noopur_OTuser");
+            ////Driver.Navigate().GoToUrl("https://staging3.mediacentrecore.com/Account/Login?ReturnUrl=%2F");
 
-            //Enter Noopur_OTUser password
-            Driver.FindElement(By.XPath(".//*input[@='password']")).SendKeys("UniquePass45$$");
+            ////type in the username 
+            //Driver.FindElement(By.XPath(".//*input[@id='username']")).SendKeys("admina");
 
-            //Select the basket
+            ////Enter the password
+            //Driver.FindElement(By.XPath(".//*input[@='password']")).SendKeys("password");
+
+            ////Press Login
+            //Driver.FindElement(By.XPath(".//*type[@='submit']")).Click();
+
+            ////As an OT Location User
+            //Driver.FindElement(By.XPath(".//*input[@id='username']")).SendKeys("Noopur_OTuser");
+
+            ////Enter Noopur_OTUser password
+            //Driver.FindElement(By.XPath(".//*input[@='password']")).SendKeys("UniquePass45$$");
+
+            ////Select the basket
+
+            //Driver.Close();
 
 
         }
