@@ -15,23 +15,13 @@ namespace ConsoleApplication2
         {
 
             IWebDriver _driver = new ChromeDriver();
-
+            _driver.Manage().Window.Maximize();
             _driver.Navigate().GoToUrl("https://staging3.mediacentrecore.com/Account/Login?ReturnUrl=%2F");
 
-            IWebElement userName = _driver.FindElement(By.Id("Username"));
+            _driver.FindElement(By.Id("Username")).SendKeys("userOne");
 
-            // Enter something to search for
-            userName.SendKeys("userOne");
-
-            IWebElement password = _driver.FindElement(By.Id("Password"));
-
-            password.SendKeys("passwordOne");
-
-            
-            _driver.Close();
-
-
-
+            _driver.FindElement(By.Id("Password")).SendKeys("passwordOne");
+           
 
         }
     }
