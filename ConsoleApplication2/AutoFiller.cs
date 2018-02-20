@@ -18,12 +18,19 @@ namespace ConsoleApplication2
 
             _driver.Navigate().GoToUrl("https://staging3.mediacentrecore.com/Account/Login?ReturnUrl=%2F");
 
-            IWebElement query = _driver.FindElement(By.Id("Username"));
+            IWebElement userName = _driver.FindElement(By.Id("Username"));
 
             // Enter something to search for
-            query.SendKeys("userone");
+            userName.SendKeys("userOne");
+
+            IWebElement password = _driver.FindElement(By.Id("Password"));
+
+            password.SendKeys("passwordOne");
 
             
+            _driver.Close();
+
+
 
 
         }
